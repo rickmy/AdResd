@@ -1,0 +1,76 @@
+﻿@model IEnumerable<AdResd.Models.Residencia>
+
+@{
+    ViewData["Title"] = "Residencias";
+}
+<a asp-controller="Home" asp-action="Index">Regresar</a>
+<h1 class="h1 text-center text-strong ">Listado de Residencias</h1>
+
+<p>
+    <a asp-action="Create">Ingresar Residencia</a>
+</p>
+<table class="table table-responsive-sm table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroDeResidencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoResidenciaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CedulaDuenio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombresDuenio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoDuenio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonoDuenio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorreoDuenio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Arrendado)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroDeResidencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoResidencia.NombreTipoResidencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CedulaDuenio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombresDuenio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoDuenio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoDuenio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorreoDuenio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arrendado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdResidencia">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdResidencia">Detalles</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

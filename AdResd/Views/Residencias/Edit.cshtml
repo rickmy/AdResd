@@ -1,0 +1,94 @@
+﻿@model AdResd.Models.Residencia
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Residencia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdResidencia" />
+            <div class="form-group">
+                <label asp-for="TipoResidenciaId" class="control-label"></label>
+                <select asp-for="TipoResidenciaId" class="form-control" asp-items="ViewBag.TipoResidenciaId"></select>
+                <span asp-validation-for="TipoResidenciaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroDeResidencia" class="control-label"></label>
+                <input asp-for="NumeroDeResidencia" class="form-control" />
+                <span asp-validation-for="NumeroDeResidencia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CedulaDuenio" class="control-label"></label>
+                <input asp-for="CedulaDuenio" class="form-control" />
+                <span asp-validation-for="CedulaDuenio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombresDuenio" class="control-label"></label>
+                <input asp-for="NombresDuenio" class="form-control" />
+                <span asp-validation-for="NombresDuenio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApellidoDuenio" class="control-label"></label>
+                <input asp-for="ApellidoDuenio" class="form-control" />
+                <span asp-validation-for="ApellidoDuenio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefonoDuenio" class="control-label"></label>
+                <input asp-for="TelefonoDuenio" class="form-control" />
+                <span asp-validation-for="TelefonoDuenio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CorreoDuenio" class="control-label"></label>
+                <input asp-for="CorreoDuenio" class="form-control" />
+                <span asp-validation-for="CorreoDuenio" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Arrendado" /> @Html.DisplayNameFor(model => model.Arrendado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="CedulaArrendatario" class="control-label"></label>
+                <input asp-for="CedulaArrendatario" class="form-control" />
+                <span asp-validation-for="CedulaArrendatario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreArrendatario" class="control-label"></label>
+                <input asp-for="NombreArrendatario" class="form-control" />
+                <span asp-validation-for="NombreArrendatario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApellidoArrendatario" class="control-label"></label>
+                <input asp-for="ApellidoArrendatario" class="form-control" />
+                <span asp-validation-for="ApellidoArrendatario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefonoArrendatario" class="control-label"></label>
+                <input asp-for="TelefonoArrendatario" class="form-control" />
+                <span asp-validation-for="TelefonoArrendatario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EncargadoPagoId" class="control-label"></label>
+                <select asp-for="EncargadoPagoId" class="form-control" asp-items="ViewBag.EncargadoPagoId"></select>
+                <span asp-validation-for="EncargadoPagoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

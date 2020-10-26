@@ -1,0 +1,96 @@
+﻿@model AdResd.Models.Residencia
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Residencia</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoResidencia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoResidencia.IdTipoResidencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumeroDeResidencia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumeroDeResidencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaDuenio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CedulaDuenio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombresDuenio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombresDuenio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ApellidoDuenio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ApellidoDuenio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TelefonoDuenio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TelefonoDuenio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CorreoDuenio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CorreoDuenio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Arrendado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Arrendado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaArrendatario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CedulaArrendatario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreArrendatario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreArrendatario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ApellidoArrendatario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ApellidoArrendatario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TelefonoArrendatario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TelefonoArrendatario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EncargadoPago)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EncargadoPago.IdEncargadoPago)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdResidencia">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
